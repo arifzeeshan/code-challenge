@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "scripts": {
+    "start": "nodemon --watch . --ext ts --exec ts-node server.ts",
+    "test": "node --test -r ts-node/register src/chatDirectory.test.ts",
+    "build": "tsc",
+    "lint": "prettier --check server.ts config.ts src/**/*.ts ../shared/**/*.ts package.json tsconfig.json",
+    "format": "prettier --write server.ts config.ts src/**/*.ts ../shared/**/*.ts package.json tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.7",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.0.1",
+    "socket.io": "^4.8.1"
+  }
+}
