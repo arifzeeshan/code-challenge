@@ -201,7 +201,7 @@ export default function Home() {
               Real-time chat for two people
             </Title>
             <Paragraph type="secondary">
-              Choose your connection ID, share it with a friend, and start a private
+              Choose your connection ID and start a private
               live conversation when both of you are online.
             </Paragraph>
           </Space>
@@ -294,9 +294,6 @@ export default function Home() {
 
             <Col xs={24} lg={9}>
               <Card title="Online now">
-                <Paragraph type="secondary">
-                  Use this list while testing locally with multiple browser windows.
-                </Paragraph>
                 <List
                   dataSource={otherOnlineUsers}
                   locale={{ emptyText: 'No other users are online yet.' }}
