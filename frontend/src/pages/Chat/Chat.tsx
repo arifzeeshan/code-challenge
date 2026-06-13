@@ -350,12 +350,13 @@ export default function Chat() {
             }
             label="Message"
           >
-            <Space.Compact block>
+            <Flex gap="small" style={{ width: '100%' }}>
               <TextArea
                 aria-label="Message"
                 autoSize={{ minRows: 1, maxRows: 4 }}
                 disabled={chatEnded}
                 maxLength={MAX_MESSAGE_LENGTH}
+                style={{ flex: 1 }}
                 value={draft}
                 onChange={(event) => setDraft(event.target.value)}
                 onKeyDown={handleDraftKeyDown}
@@ -368,7 +369,7 @@ export default function Chat() {
               >
                 Send
               </Button>
-            </Space.Compact>
+            </Flex>
           </Form.Item>
         </Form>
         </Flex>
